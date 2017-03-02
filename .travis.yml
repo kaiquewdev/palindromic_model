@@ -4,6 +4,8 @@ python:
   - '3.3'
   - '3.4'
   - '3.5'
+before_install:
+  - curl -O https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.0.0-py3-none-any.whl
 install:
-  - pip install -U https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.0.0-py3-none-any.whl
+  - pip install -U tensorflow-1.0.0-py3-none-any.whl
 script: python palindromic_model.py
