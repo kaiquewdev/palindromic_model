@@ -4,5 +4,4 @@ python:
   - '3.3'
   - '3.4'
   - '3.5'
-script: pip install -U https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.0.0-py3-none-any.whl
 script: python palindromic_model.py
