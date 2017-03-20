@@ -46,6 +46,6 @@ trY = np.array([palindromic_encode(i) for i in range(101, 2**NUM_DIGITS)])
 Now we setup the model using tensorflow on that case another tool set can be used like theano.
 Using at least 100 hidden units.
 
-```
+```Python
 NUM_HIDDEN = 100
 ```
