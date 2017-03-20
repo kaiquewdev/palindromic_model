@@ -5,9 +5,9 @@
 
 # Description
 
-This a basic model to describe a palindromic model using binary encode based on this article
+Palindromic model using multi-layer-perceptron or common knowing like as neural networks.
 
-[Fizz Buzz using Tensorflow as environment](http://joelgrus.com/2016/05/23/fizz-buzz-in-tensorflow/)
+Credits to: [Fizz Buzz using Tensorflow as environment](http://joelgrus.com/2016/05/23/fizz-buzz-in-tensorflow/)
 
 # Primary aspects of the model
 
