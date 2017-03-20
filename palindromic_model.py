@@ -1,3 +1,4 @@
+
 '''Palindromic Model'''
 
 import numpy as np
@@ -37,7 +38,7 @@ def palindromic(i,prediction):
     m = 'This numbers is a palindromic (%s)'
     return [str(i), m % (i), m % (i)][prediction]
 
-BATCH_SIZE = 128
+BATCH_SIZE = 1024
 
 with tf.Session() as sess:
     tf.initialize_all_variables().run()
