@@ -35,7 +35,7 @@ def palindromic_encode(i):
     else: return np.array([1,0,0])
 ```
 
-Training data could be use a sequence generation of 1 to 100 on the set, in total the numbers to be trainned was 1024.
+Training data could be use a sequence generation of 1 to 100 on the set, in total the numbers to be trainned was 4164.
 
 ```Python
 NUM_DIGITS = 10
