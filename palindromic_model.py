@@ -41,17 +41,17 @@ def palindromic(i,prediction):
 BATCH_SIZE = 512
 
 if __name__ == '__main__':
-  with tf.Session() as sess:
-      tf.initialize_all_variables().run()
+    with tf.Session() as sess:
+        tf.initialize_all_variables().run()
 
-      for epoch in range(10**4):
-          p = np.random.permutation(range(len(trX)))
-          trX,trY = trX[p],trY[p]
+        for epoch in range(10**4):
+            p = np.random.permutation(range(len(trX)))
+            trX,trY = trX[p],trY[p]
 
-          for start in range(0,len(trX),BATCH_SIZE):
-              end = start + BATCH_SIZE
-              sess.run(train_op,feed_dict={X:trX[start:end],Y:trY[start:end]})
-              print(epoch,np.mean(np.argmax(trY,axis=1) == sess.run(predict_op,feed_dict={X:trX,Y:trY})))
+            for start in range(0,len(trX),BATCH_SIZE):
+                end = start + BATCH_SIZE
+                sess.run(train_op,feed_dict={X:trX[start:end],Y:trY[start:end]})
+                print(epoch,np.mean(np.argmax(trY,axis=1) == sess.run(predict_op,feed_dict={X:trX,Y:trY})))
 
           numbers = np.arange(1,1001)
           teX = np.transpose(binary_encode(numbers,NUM_DIGITS))
