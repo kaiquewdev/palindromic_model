@@ -11,4 +11,5 @@ pipelines:
     - step:
         script: # Modify the commands below to build your repository.
           - pip install tensorflow
+          - python palindromic_model_test.py
           - python palindromic_model.py
