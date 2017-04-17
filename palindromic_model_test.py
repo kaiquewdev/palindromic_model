@@ -2,7 +2,7 @@
 
 import numpy as np
 import tensorflow as tf
-
+# palindromic methods
 from palindromic_model import palindromic_encode
 
 class PalindromicEncodeTest(tf.test.TestCase):
