@@ -30,7 +30,7 @@ def model(X,w_h,w_o):
     return tf.matmul(h,w_o)
 
 py_x = model(X,w_h,w_o)
-cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(py_x,Y))
+cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=Y,logits=py_x))
 train_op = tf.train.GradientDescentOptimizer(0.05).minimize(cost)
 predict_op = tf.argmax(py_x,1)
 
