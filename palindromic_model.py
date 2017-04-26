@@ -41,6 +41,8 @@ def palindromic(i,prediction):
 
 BATCH_SIZE = 512
 
+saver = tf.train.Saver()
+
 if __name__ == '__main__':
   with tf.Session() as sess:
     tf.initialize_all_variables().run()
@@ -59,3 +61,6 @@ if __name__ == '__main__':
       teY = sess.run(predict_op,feed_dict={X:teX})
       output = np.vectorize(palindromic)(numbers,teY)
       print(output)
+
+    save_path = saver.save(sess,'./models/palindromic_model_%s.ckpt' % (datetime.datetime.timestamp(datetime.datetime.now())))
+    print("Palindromic model saved in file: %s" % (save_path))
