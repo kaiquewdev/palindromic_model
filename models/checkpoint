@@ -1,2 +1,2 @@
-model_checkpoint_path: "palindromic_model.ckpt"
-all_model_checkpoint_paths: "palindromic_model.ckpt"
+model_checkpoint_path: "palindromic_model_1493245404.65591.ckpt"
+all_model_checkpoint_paths: "palindromic_model_1493245404.65591.ckpt"

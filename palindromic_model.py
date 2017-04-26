@@ -2,6 +2,7 @@
 '''Palindromic Model'''
 
 import numpy as np
+import datetime
 import tensorflow as tf
 
 binary_encode = lambda i,num_digits: np.array([i >> d & 1 for d in range(num_digits)])
