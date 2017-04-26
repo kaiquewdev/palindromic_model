@@ -4,6 +4,7 @@ import numpy as np
 import tensorflow as tf
 # palindromic methods
 from palindromic_model import binary_encode
+from palindromic_model import palindromic_equality
 from palindromic_model import palindromic_encode
 from palindromic_model import palindromic
 
@@ -11,6 +12,12 @@ class BinaryEncodeTest(tf.test.TestCase):
   def testBinaryEncode(self):
     with self.test_session():
       self.assertEqual(binary_encode(101,2**10).all(),np.array([101 >> d & 1 for d in range(2**10)]).all())
+
+class PalindromicEqualityTest(tf.test.TestCase):
+  def testPalindromicEquality(self):
+    with self.test_session():
+      self.assertEqual(palindromic_equality(10),False)
+      self.assertEqual(palindromic_equality(101),True)
 
 class PalindromicEncodeTest(tf.test.TestCase):
   def testNonPalindromicEncode(self):

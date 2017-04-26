@@ -5,10 +5,11 @@ import numpy as np
 import tensorflow as tf
 
 binary_encode = lambda i,num_digits: np.array([i >> d & 1 for d in range(num_digits)])
+palindromic_equality = lambda i: str(i)[::-1] == str(i)
 
 def palindromic_encode(i):
-    if str(i)[::-1] == str(i): return np.array([0,0,1])
-    elif str(i)[::-1] == str(i): return np.array([0,1,0])
+    if palindromic_equality(i): return np.array([0,0,1])
+    elif palindromic_equality(i): return np.array([0,1,0])
     else: return np.array([1,0,0])
 
 NUM_DIGITS = 10
