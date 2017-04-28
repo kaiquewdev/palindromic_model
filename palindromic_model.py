@@ -46,7 +46,7 @@ saver = tf.train.Saver()
 
 if __name__ == '__main__':
   with tf.Session() as sess:
-    tf.initialize_all_variables().run()
+    tf.global_variables_initializer().run()
 
     for epoch in range(10**4):
       p = np.random.permutation(range(len(trX)))
@@ -65,3 +65,5 @@ if __name__ == '__main__':
 
     save_path = saver.save(sess,'./models/palindromic_model_%s.ckpt' % (datetime.datetime.timestamp(datetime.datetime.now())))
     print("Palindromic model saved in file: %s" % (save_path))
+
+    file_writer = tf.summary.FileWriter('./logs', sess.graph)
